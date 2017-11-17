@@ -12,7 +12,8 @@
     <th>model</th>
     <th>color</th>
     <th>year</th>
-    <tr th:each="car :${car.getPlate()}" th:object="${car}">
+    <tr th:each="car :${cars}" th:object="${car}">
+        <td th:text="*{car.getPlate()}"/>
         <td th:text="*{car.getBrand()}"/>
         <td th:text="*{car.getModel()}"/>
         <td th:text="*{car.getColor()}"/>
