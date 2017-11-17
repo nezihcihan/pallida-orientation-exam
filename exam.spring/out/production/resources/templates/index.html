@@ -18,11 +18,23 @@
 </table>
 <!--//ADD NEW plate-->
 <h6>Add new plate</h6>
-<form method="post" name="form" id="form" th:action="@{/create}" role="form">
+<form method="post" th:action="@{/create}" >
     <div class="form-group">
         <label for="plate">Plate</label>
-        <input class="form-control" type="text"  id="plate" name="plate"/>
+        <input type="text"  id="plate" name="plate"/>
     </div>
 </form>
+<p><button type="submit" id="submit" class="btn btn-success" >Add Plate</button></p>
+<h6>Search by plate</h6>
+    <div>
+        <form  th:action="@{/search}" method="get">
+            <div >
+                <label >Search</label>
+                <input type="search"  name="search" placeholder="Search"/>
+                <br/>
+                <p><button >Search</button></p>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
