@@ -8,12 +8,15 @@
 
 <table>
     <th>Plate</th>
-    <th></th>
-    <th>Content</th>
-    <th>Date</th>
-    <th>User</th>
-    <tr th:each="car :${cars}" th:object="${car}">
-        <td th:text="*{plate}"/>
+    <th>brand</th>
+    <th>model</th>
+    <th>color</th>
+    <th>year</th>
+    <tr th:each="car :${car.getPlate()}" th:object="${car}">
+        <td th:text="*{car.getBrand()}"/>
+        <td th:text="*{car.getModel()}"/>
+        <td th:text="*{car.getColor()}"/>
+        <td th:text="*{car.getYear()}"/>
     </tr>
 </table>
 <!--//ADD NEW plate-->
