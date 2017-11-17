@@ -16,5 +16,13 @@
         <td th:text="*{plate}"/>
     </tr>
 </table>
+<!--//ADD NEW plate-->
+<h6>Add new plate</h6>
+<form method="post" name="form" id="form" th:action="@{/create}" role="form">
+    <div class="form-group">
+        <label for="plate">Plate</label>
+        <input class="form-control" type="text"  id="plate" name="plate"/>
+    </div>
+</form>
 </body>
 </html>

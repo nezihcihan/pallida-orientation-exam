@@ -19,7 +19,7 @@ public class MainController {
     @GetMapping({"/"})
     public String list(Model model) {
 
-        model.addAttribute("cars", carRepository.findAllByPlate());
+        model.addAttribute("cars", carRepository.findAll());
         return  "index";
     }
 
@@ -27,5 +27,11 @@ public class MainController {
     public ModelAndView create(@RequestParam("plate") String plate) {
         carRepository.save(new Car(plate));
         return new ModelAndView("redirect:/");
+    }
+
+    @GetMapping({"/search"})
+    public String filterName(@RequestParam(required = false) String search, Model model) {
+        model.addAttribute("cars", carRepository.findAllByPlate(search));
+        return "index";
     }
 }

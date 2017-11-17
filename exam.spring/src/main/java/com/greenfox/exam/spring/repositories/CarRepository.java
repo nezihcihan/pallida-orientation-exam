@@ -7,5 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 @Repository
 public interface CarRepository extends CrudRepository<Car, Long> {
-    Iterable<Car> findAllByPlate();
+    List<Car>findAll();
+    List<Car>findAllByPlate(String plate);
 }
