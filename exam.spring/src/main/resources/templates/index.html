@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <title>Title</title>
+    <title></title>
 </head>
 <body>
 
 <table>
     <th>Plate</th>
-    <th>Brand</th>
-    <th>Model</th>
-    <th>Color</th>
-    <th>Year</th>
+    <th></th>
+    <th>Content</th>
+    <th>Date</th>
+    <th>User</th>
     <tr th:each="car :${cars}" th:object="${car}">
         <td th:text="*{plate}"/>
-
     </tr>
 </table>
+<!--//ADD NEW plate-->
+<h6>Add new plate</h6>
 <form method="post" name="form" id="form" th:action="@{/create}" role="form">
     <div class="form-group">
-        <input class="form-control" type="text"  id="username" name="username"/>
-        <p><button type="submit" id="submit" class="btn btn-success" >Add username</button></p><br/>
+        <label for="plate">Plate</label>
+        <input class="form-control" type="text"  id="plate" name="plate"/>
     </div>
 </form>
-</body>
-</table>
 </body>
 </html>

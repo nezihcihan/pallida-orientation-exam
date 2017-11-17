@@ -15,7 +15,7 @@ import javax.sql.DataSource;
 public class DataSourceConfig {
 
     private static final String TEMP_DIRECTORY = System.getProperty("java.io.tmpdir");
-    @Bean(name = "mainDataSource")
+    @Bean(name = "licence_plates.sql")
     public DataSource createMainDataSource() {
         JdbcDataSource ds = new JdbcDataSource();
         ds.setURL("jdbc:h2:"+TEMP_DIRECTORY+"/testdata;MODE=MySQL");

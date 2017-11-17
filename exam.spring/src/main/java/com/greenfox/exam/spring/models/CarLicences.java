@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import java.util.ArrayList;
 import java.util.Collection;
 
-@Entity
 public class CarLicences {
 
   ArrayList<Car> CarLicences = new ArrayList<Car>();
